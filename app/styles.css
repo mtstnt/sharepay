@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading-1 {
+    @apply block py-4 text-3xl font-bold;
+}
+
+.form-group {
+    @apply w-full mb-3;
+
+    & .form-label {
+        @apply block mb-1 font-bold;
+    }
+    
+    & .form-control {
+        @apply block w-full p-3 border rounded bg-slate-100 outline-blue-400 outline-2;
+    }
+}
+
+.btn {
+    @apply block p-2 transition rounded cursor-pointer;
+}
+
+.btn-success {
+    @apply bg-green-400 text-green-950 hover:bg-green-500;
+}
