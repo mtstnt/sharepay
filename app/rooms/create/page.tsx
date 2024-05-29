@@ -1,12 +1,10 @@
 import { revalidatePath } from "next/cache"
 import { cookies } from "next/headers"
-import db from "../database"
-import { createNewRoom } from "../repo/room"
+import db from "../../database"
+import { createNewRoom } from "../../repo/room"
 import { redirect } from "next/navigation"
 
 const PATH = "/create"
-
-
 
 async function onSubmitCreateRoom(formData: FormData) {
     "use server"
@@ -23,10 +21,10 @@ export default function CreateForm() {
     return (
         <div className="flex items-center justify-center w-full h-full">
             <form action={onSubmitCreateRoom} className="w-11/12 p-4 border rounded shadow-lg sm:w-6/12">
-                <h1 className="heading-1">Buat Room Baru</h1>
+                <h1 className="heading-1">Create a New Room</h1>
                 
                 <div className="form-group">
-                    <label className="form-label" htmlFor="name">Nama</label>
+                    <label className="form-label" htmlFor="name">Name</label>
                     <input className="form-control" type="text" name="name" id="name" />
                 </div>
 

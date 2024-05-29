@@ -1,6 +1,17 @@
 @tailwind base;
+
+@layer base {
+    html {
+        @apply text-slate-50;
+    }    
+}
+
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-primary;
+}
 
 .heading-1 {
     @apply block py-4 text-3xl font-bold;
@@ -14,12 +25,12 @@
     }
     
     & .form-control {
-        @apply block w-full p-3 border rounded bg-slate-100 outline-blue-400 outline-2;
+        @apply block w-full p-3 text-black border rounded bg-slate-100 outline-blue-400 outline-2;
     }
 }
 
 .btn {
-    @apply block p-2 transition rounded cursor-pointer;
+    @apply block p-2 text-center transition rounded cursor-pointer;
 }
 
 .btn-success {
